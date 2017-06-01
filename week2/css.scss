@@ -1,0 +1,41 @@
+//*Write a CSS rule that gives all h3 and h5 elements a padding of .5em, a dashed border (any style) and a margin of .5em*/
+
+h3, h5 {
+  padding: .5em;
+  border: dashed;
+  margin: .5em;
+}
+//Write a CSS rule that changes the color of all elements containing attribute class="high" to green and shifts them down 25 pixels and right 25 pixels.
+
+*[high] {
+  color: green;
+  margin-top: 25px;
+  margin-left: 25px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  border-bottom: dotted 1px #006400;
+}
+
+ul > span {
+  background-color: #333333;
+  font: white;
+}
+
+li {
+  letter-spacing: -2px;
+}
+
+p.on_right {
+  text-align: right;
+  font-size: 30px;
+}
+
+ul > li {
+  margin: 1px 4px 10px 20px;
+}
