@@ -39,3 +39,14 @@ p.on_right {
 ul > li {
   margin: 1px 4px 10px 20px;
 }
+
+cite + div {
+  color: purple;
+  font-size: 40px;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'PoiretOne-Regular';
+  src: URL('PoiretOne-Regular.ttf') format('ttf');
+}
