@@ -18,48 +18,85 @@
         width: 65px;
         height: 37px;
       }
-      .row1{
-        float: left;
-        display: relative;
+      .flexBoxButton1 {
+        display: flex;
+        display: -webkit-flex;
+        width: 213px;
+        display: inline-flex;
+      }
+      .flex2 {
+        display: flex;
+        width: 213px;
+      }
+
+      .flex3{
+        display: flex;
+        width: 213px;
+      }
+
+      .opBox {
+        display: flex;
+        width: 213px;
+      }
+
+      .opBox2 {
+        display: flex;
+      }
+      .one{
+        justify-content: flex-start;
+        /*float: left;
+        display: relative;*/
       }
       .row2 {
-        clear: left;
+        justify-content: flex-end;
+        /*clear: left;*/
 
       }
 
       .row3 {
-        clear: both;
+        align-content: stretch;
       }
       .calcBody {
-        float: left;
+        /*float: left;*/
       }
 
       .operator{
-        float: right;
+        /*float: right;*/
       }
     </style>
   </head>
   <body>
     <div class="calcBody">
       <div class="answerbar">
-        0
+          0
       </div>
-        <div class="pure-u-1-3 button row1"><p>1</p></div>
-        <div class="pure-u-1-3 button row1"><p>2</p></div>
-        <div class="pure-u-1-3 button row1"><p>3</p></div>
-        <div class="pure-u-1-3 button row2"><p>4</p></div>
-        <div class="pure-u-1-3 button row2"><p>5</p></div>
-        <div class="pure-u-1-3 button row2"><p>6</p></div>
-        <div class="pure-u-1-3 button row3"><p>7</p></div>
-        <div class="pure-u-1-3 button row3"><p>8</p></div>
-        <div class="pure-u-1-3 button row3"><p>9</p></div>
-        <div class="pure-u-1-3 button operator"><p>0</p></div>
-        <div class="pure-u-1-3 button operator"><p>+</p></div>
-        <div class="pure-u-1-3 button operator"><p>-</p></div>
-        <div class="pure-u-1-3 button operator"><p>*</p></div>
-        <div class="pure-u-1-3 button operator"><p>/</p></div>
-        <div class="pure-u-1-3 button operator"><p>CL</p></div>
-        <div class="pure-u-1-3 button operator"><p>=</p></div>
-    </div>
+      <div class="flexBoxButton1">
+          <div class="button row1 one"><p>1</p></div>
+          <div class="button row1 two"><p>2</p></div>
+          <div class="button row1 three"><p>3</p></div>
+        </div>
+        <div class="flex2">
+            <div class="button row2 four"><p>4</p></div>
+            <div class="button row2 five"><p>5</p></div>
+            <div class="button row2 six"><p>6</p></div>
+        </div>
+        <div class="flex3">
+            <div class="button row3 seven"><p>7</p></div>
+            <div class="button row3 eight"><p>8</p></div>
+            <div class="button row3 nine"><p>9</p></div>
+        </div>
+        <div class="opBox">
+            <div class="button operator zero"><p>0</p></div>
+            <div class="button operator"><p>+</p></div>
+            <div class="button operator"><p>-</p></div>
+        </div>
+        <div class="opBox2">
+            <div class="button operator"><p>*</p></div>
+            <div class="button operator"><p>/</p></div>
+            <div class="button operator"><p>CL</p></div>
+            <div class="button operator"><p>=</p></div>
+        </div>
+
+        </div>
   </body>
 </html>
