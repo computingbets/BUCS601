@@ -64,37 +64,173 @@
         /*float: right;*/
       }
     </style>
+    <script>
+    /*
+TODO:
+    Limit number input
+    Disallow . from being entered multiple times
+    Clean up structure
+*/
+
+(function() {
+  "use strict";
+
+  // Shortcut to get elements
+  var el = function(element) {
+    if (element.charAt(0) === "#") { // If passed an ID...
+      return document.querySelector(element); // ... returns single element
+    }
+
+    return document.querySelectorAll(element); // Otherwise, returns a nodelist
+  };
+
+  // Variables
+  var viewer = el("#viewer"), // Calculator screen where result is displayed
+    equals = el("#equals"), // Equal button
+    nums = el(".num"), // List of numbers
+    ops = el(".ops"), // List of operators
+    theNum = "", // Current number
+    oldNum = "", // First number
+    resultNum, // Result
+    operator; // Batman
+
+  // When: Number is clicked. Get the current number selected
+  var setNum = function() {
+    if (resultNum) { // If a result was displayed, reset number
+      theNum = this.getAttribute("data-num");
+      resultNum = "";
+    } else { // Otherwise, add digit to previous number (this is a string!)
+      theNum += this.getAttribute("data-num");
+    }
+
+    viewer.innerHTML = theNum; // Display current number
+
+  };
+
+  // When: Operator is clicked. Pass number to oldNum and save operator
+  var moveNum = function() {
+    oldNum = theNum;
+    theNum = "";
+    operator = this.getAttribute("data-ops");
+
+    equals.setAttribute("data-result", ""); // Reset result in attr
+  };
+
+  // When: Equals is clicked. Calculate result
+  var displayNum = function() {
+
+    // Convert string input to numbers
+    oldNum = parseFloat(oldNum);
+    theNum = parseFloat(theNum);
+
+    // Perform operation
+    switch (operator) {
+      case "plus":
+        resultNum = oldNum + theNum;
+        break;
+
+      case "minus":
+        resultNum = oldNum - theNum;
+        break;
+
+      case "times":
+        resultNum = oldNum * theNum;
+        break;
+
+      case "divided by":
+        resultNum = oldNum / theNum;
+        break;
+
+        // If equal is pressed without an operator, keep number and continue
+      default:
+        resultNum = theNum;
+    }
+
+    // If NaN or Infinity returned
+    if (!isFinite(resultNum)) {
+      if (isNaN(resultNum)) { // If result is not a number; set off by, eg, double-clicking operators
+        resultNum = "You broke it!";
+      } else { // If result is infinity, set off by dividing by zero
+        resultNum = "Look at what you've done";
+        el('#calculator').classList.add("broken"); // Break calculator
+        el('#reset').classList.add("show"); // And show reset button
+      }
+    }
+
+    // Display result, finally!
+    viewer.innerHTML = resultNum;
+    equals.setAttribute("data-result", resultNum);
+
+    // Now reset oldNum & keep result
+    oldNum = 0;
+    theNum = resultNum;
+
+  };
+
+  // When: Clear button is pressed. Clear everything
+  var clearAll = function() {
+    oldNum = "";
+    theNum = "";
+    viewer.innerHTML = "0";
+    equals.setAttribute("data-result", resultNum);
+  };
+
+  /* The click events */
+
+  // Add click event to numbers
+  for (var i = 0, l = nums.length; i < l; i++) {
+    nums[i].onclick = setNum;
+  }
+
+  // Add click event to operators
+  for (var i = 0, l = ops.length; i < l; i++) {
+    ops[i].onclick = moveNum;
+  }
+
+  // Add click event to equal sign
+  equals.onclick = displayNum;
+
+  // Add click event to clear button
+  el("#clear").onclick = clearAll;
+
+  // Add click event to reset button
+  el("#reset").onclick = function() {
+    window.location = window.location;
+  };
+
+}());
+</script>
   </head>
   <body>
     <div class="calcBody">
-      <div class="answerbar">
+      <div class="viewer">
           0
       </div>
       <div class="flexBoxButton1">
-          <div class="button row1 one"><p>1</p></div>
-          <div class="button row1 two"><p>2</p></div>
-          <div class="button row1 three"><p>3</p></div>
+          <div class="button row1 one num"><p>1</p></div>
+          <div class="button row1 two num"><p>2</p></div>
+          <div class="button row1 three num"><p>3</p></div>
         </div>
         <div class="flex2">
-            <div class="button row2 four"><p>4</p></div>
-            <div class="button row2 five"><p>5</p></div>
-            <div class="button row2 six"><p>6</p></div>
+            <div class="button row2 four num"><p>4</p></div>
+            <div class="button row2 five num"><p>5</p></div>
+            <div class="button row2 six num"><p>6</p></div>
         </div>
         <div class="flex3">
-            <div class="button row3 seven"><p>7</p></div>
-            <div class="button row3 eight"><p>8</p></div>
-            <div class="button row3 nine"><p>9</p></div>
+            <div class="button row3 seven num"><p>7</p></div>
+            <div class="button row3 eight num"><p>8</p></div>
+            <div class="button row3 nine num"><p>9</p></div>
         </div>
         <div class="opBox">
-            <div class="button operator zero"><p>0</p></div>
-            <div class="button operator"><p>+</p></div>
-            <div class="button operator"><p>-</p></div>
+            <div class="button ops zero num"><p>0</p></div>
+            <div class="button ops"><p>+</p></div>
+            <div class="button ops"><p>-</p></div>
         </div>
         <div class="opBox2">
-            <div class="button operator"><p>*</p></div>
-            <div class="button operator"><p>/</p></div>
-            <div class="button operator"><p>CL</p></div>
-            <div class="button operator"><p>=</p></div>
+            <div class="button ops"><p>*</p></div>
+            <div class="button ops"><p>/</p></div>
+            <div class="button ops clear"><p>CL</p></div>
+            <div class="button ops equals"><p>=</p></div>
         </div>
 
         </div>
