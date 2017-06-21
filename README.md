@@ -2,8 +2,8 @@
 
 ## Final Project
 
-<img src="final_project/CSFP.jpg"/>
-<img src="final_project/CSFP2.jpg"/>
+<img src="final_project/CSFP.jpg" style="width:125px; height:125px;"/>
+<img src="final_project/CSFP2.jpg" style="width:125px; height:125px;"/>
 
 <p> These wireframes are the blueprints for a landscape architecture blog. The
 blog features a homescreen (index.html) which will feature a hamburger menu,
