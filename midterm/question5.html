@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Q5</title>
+    <script>
+  function selectMultiple() {
+      document.getElementById("mySelect").multiple = true;
+  }
+  $(document).ready(function() {
+
+        var last_valid_selection = null;
+
+        $('#userRequest_activity').change(function(event) {
+
+          if ($(this).val().length > 3) {
+
+            $(this).val(last_valid_selection);
+          } else {
+            last_valid_selection = $(this).val();
+          }
+        });
+      });
+  </script>
+  <script type="text/javascript">
+  var answer = function(min, max) {
+    min = Math.ceil(1);
+    max = Math.floor(10);
+    return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+  };
+  var e = document.getElementById("mySelect");
+  var strUser = e.options[e.selectedIndex].value;
+  var validator = function() {
+    if (strUser === answer) {
+      prompt('You win!')
+    };
+  };
+  </script>
+
+  <script type="text/javascript">
+
+  </script>
+  </head>
+
+  <body>
+
+  <form>
+  <select id="mySelect" size="10">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+  </select>
+  <input type="button" onclick="selectMultiple()" value="Select multiple">
+  </form>
+
+  <p>Guess the random number! Select 3 guesses</p>
+  </body>
+</html>
