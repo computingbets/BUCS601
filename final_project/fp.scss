@@ -6,21 +6,44 @@ body {
   background-image: url(http://media.istockphoto.com/photos/leaf-green-font-number-picture-id104652735);
   height: 328px;
   width: 580px;
+  margin: auto;
 }
 .landing {
   height: 350px;
   width: 580px;
+  margin: auto;
 }
+
+.landing_div {
+  margin: auto;
+}
+
 .latest_post {
   height: 350px;
   width: 580px;
+  margin: auto;
 }
 
 .sedaris {
   height: 94%;
   width: 100%;
 }
+
+.henry {
+  height: 94%;
+  width: 100%;
+}
+
 .op_ed {
   height: 350px;
   width: 580px;
+  margin: auto;
+}
+.op_ed_href {
+  position: absolute;
+  margin-top: 7px;
+}
+.latest_post_href {
+  position: absolute;
+  margin-top: 7px;
 }
