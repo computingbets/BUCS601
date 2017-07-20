@@ -11,7 +11,21 @@ let largestNum = function(numberlist) {
         return
         compare
       } else (comptwo > compare) {
-        return comptwo
+        return comptwo;
       }
-    }
+    };
+};
+
+//Q2
+
+var reverseWords = function(string) {
+  var splitstring = string.split(" ");
+
+  for (i=0; i <= splitstring.length ; i++) {
+    splitstring = i.reverse().join(" ");
+  }
+  return
+  splitstring;
 }
+
+//Q3
