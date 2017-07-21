@@ -64,5 +64,14 @@ var findYoungestPerson(persons) {
 //     people.push(new Person("Jesse", "Liberty", 57));
 //     people.push(new Person("Jon", "Skeet", 38));
 // };
+// function Tree(name) {
+//   this.name = name;
+// }
+var group = function(people,firstName,lastName,age) {
+  this.persons = people;
+  this.firstName = firstname;
+  this.lastName = lastName;
+  this.age = age;
+};
 
-var persons = new Object {};
+group.push(new person("John", "Staley", 30));
