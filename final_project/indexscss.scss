@@ -1,6 +1,10 @@
 body {
   background: darkred;
 }
+.landing_div {
+  margin: auto;
+  width: 580px;
+}
 
 .listicle {
   background-image: url(http://media.istockphoto.com/photos/leaf-green-font-number-picture-id104652735);
@@ -10,7 +14,7 @@ body {
 }
 .landing {
   height: 350px;
-  width: 580px;
+  width: 100%;
   margin: auto;
 }
 
