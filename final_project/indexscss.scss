@@ -1,6 +1,15 @@
 body {
-  background: darkred;
+  background-image: url("indexIMG/textured-tree-bark_medium.jpg");
 }
+
+.index_header {
+  font-size: 40px;
+}
+
+.index_header {
+  color: green;
+}
+
 .landing_div {
   margin: auto;
   width: 580px;
@@ -12,6 +21,7 @@ body {
   width: 580px;
   margin: auto;
 }
+
 .landing {
   height: 350px;
   width: 100%;
@@ -38,16 +48,46 @@ body {
   width: 100%;
 }
 
+.leaf {
+  height: 94%;
+  width: 100%;
+}
+
 .op_ed {
   height: 350px;
   width: 580px;
   margin: auto;
 }
+.game {
+  background-image: url(http://media.istockphoto.com/photos/leaf-green-font-number-picture-id104652735);
+  height: 328px;
+  width: 580px;
+  margin: auto;
+  margin-top: 25px;
+}
+
+.game_href {
+  position: absolute;
+  margin-top: 7px;
+  background-color: darkgreen;
+}
+
 .op_ed_href {
   position: absolute;
   margin-top: 7px;
+  background-color: darkgreen;
 }
+
 .latest_post_href {
   position: absolute;
   margin-top: 7px;
+  background-color: darkgreen;
+}
+
+.listicle_href {
+  background-color: darkgreen;
+}
+
+.listicle_href .op_ed_href .latest_post_href .game_href {
+  font-size: 20px;
 }
