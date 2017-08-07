@@ -3,49 +3,89 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="game.scss">
-    <title>Game</title>
+    <title>Landscape Game</title>
+    <link rel="icon"
+      type="image/png"
+      href="http://www.hgsitebuilder.com/files/writeable/uploads/hostgator631553/image/tree_favicon.gif">
   </head>
   <body>
+    <div class="console">
+      Pick a tree and guess its name!
+      <ul>
+        <li style="display: inline; border-style: solid; border-color: darkgreen;" draggable="true" class="gbdrag">Grey Birch</li>
+        <li style="display: inline; border-style: solid; border-color: darkgreen;" draggable="true" class="bcdrag">Black Cherry</li>
+        <li style="display: inline; border-style: solid; border-color: darkgreen;" draggable="true" class="sdrag">Sassafras</li>
+        <li style="display: inline; border-style: solid; border-color: darkgreen;" draggable="true" class="ercdrag">Eastern Red Cedar</li>
+        <li style="display: inline; border-style: solid; border-color: darkgreen;" draggable="true" class="ppdrag">Pitch Pine</li>
+        <li style="display: inline; border-style: solid; border-color: darkgreen;" draggable="true" class="gadrag">Green Ash</li>
+        <li style="display: inline; border-style: solid; border-color: darkgreen;" draggable="true" class="wodrag">White Oak</li>
+        <li style="display: inline; border-style: solid; border-color: darkgreen;" draggable="true" class="ahdrag">American Holly</li>
+      </ul>
+    </div>
     <div class="game_flex">
       <div class="sassafras">
         <img src="http://balconygardenweb.com/wp-content/uploads/2015/09/how-to-grow-sassafras-tree_mini-1.jpg" class="st" alt="big, leafy sassafras tree">
         <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Sassafras7.jpg" class="sl" alt="sassafras tree leaves. they look like a dinosaur footprint">
         <img src="http://www.carolinanature.com/trees/saal2291.jpg" class="sb" alt="sassafras bark, looks like armor from its triangular top and rigid shapes under each triangle point">
       </div>
+      <div class="sDrop">
+          drop answer here
+      </div>
       <div class="green_ash">
         <img src="https://www.invasiveinsects.ca/eab/images/goodash.jpg" class="gat" alt="healthy green ash tree">
         <img src="https://treedoctor.msu.edu/sites/default/files/inline-images/7yyyyyyyyyyyyyyy.jpg" class="gal" alt="green ash leaves">
         <img src="http://dendro.cnre.vt.edu/dendrology/images/Fraxinus%20pennsylvanica/bark1.jpg" class="gab" alt="geometric green ash bark, looking like diamonds">
+      </div>
+      <div class="gaDrop">
+          drop answer here
       </div>
       <div class="grey_birch">
         <img src="https://tidcf.nrcan.gc.ca/images_web/imfc/arbres/photos/moyen/betula_populifolia_03a.jpg" class="gbt" alt="grey birch trunk">
         <img src="http://www.illinoiswildflowers.info/trees/photos/gray_birch2.jpg" class="gbl" alt="big gray birch leaf">
         <img src="http://dendro.cnre.vt.edu/dendrology/images/Betula%20pendula/bark1.jpg" class="gbb" alt="grey birch bark, with little width wise divits">
       </div>
+      <div class="gbDrop">
+          drop answer here
+      </div>
       <div class="white_oak">
         <img src="https://www.fast-growing-trees.com/images/D/White_Oak_450.jpg" class="wot" alt="enormous white oak tree">
         <img src="http://www.minnesotawildflowers.info/udata/r9ndp23q/trees/quercus-alba-white-oak-front-back.jpg" class="wol" alt="white oak leaves">
         <img src="http://etc.usf.edu/clippix/pix/white-oak-bark_medium.jpg" class="wob" alt="rigid oak bark">
+      </div>
+      <div class="woDrop">
+          drop answer here
       </div>
       <div class="black_cherry">
         <img src="https://s-media-cache-ak0.pinimg.com/originals/cd/e2/38/cde2381e3bb1932036fdc3fb0e0d96f2.jpg" class="bct" alt="trunk of black cherry tree">
         <img src="http://forestry.ohiodnr.gov/portals/forestry/images/trees/cherry/cherry_bk_lf_lg.jpg" class="bcl" alt="berryless black cherry leaves">
         <img src="http://www.nenature.com/NotesImages/BlackCherryBarkNne.jpg" class="bcb" alt="wafy cherry bark">
       </div>
+      <div class="bcDrop">
+          drop answer here
+      </div>
       <div class="american_holly">
         <img src="https://maxpull-gdvuch3veo.netdna-ssl.com/wp-content/uploads/2015/10/holly-tree-400x600.jpg" class="aht" alt="American Holly tree with red berries">
         <img src="http://www.illinoiswildflowers.info/trees/photos/am_holly4.jpg" class="ahl" alt="classic american holly leaves">
         <img src="http://dendro.cnre.vt.edu/dendrology/images/Ilex%20xattenuata/bark1.jpg" class="ahb" alt="holly bark">
+      </div>
+      <div class="ahDrop">
+          drop answer here
       </div>
       <div class="eastern_red_cedar">
         <img src="http://arborilogical.wpengine.netdna-cdn.com/media/uploads/ERCedar-Photo-3.jpg" class="ercberry" alt="pale blue berries of the eastern red cedar">
         <img src="https://www.wildflower.org/image_archive/320x240/RCM/RCM_IMG2652.JPG" class="ercfull" alt="pale blue berries of the eastern red cedar">
         <img src="http://www.friendsofthewildflowergarden.org/generaljpegs/Seasons/trees/eastredcedarbarkv.jpg" class="ercb" alt="scratchy cedar bark">
       </div>
+      <div class="ercDrop">
+          drop answer here
+      </div>
       <div class="pitch_pine">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/2013-05-12_11_23_41_Pitch_Pine_trees_and_view_west_from_the_Hoeferlin_Trail_in_Ramapo_Mountain_State_Forest_in_New_Jersey.jpg/1920px-2013-05-12_11_23_41_Pitch_Pine_trees_and_view_west_from_the_Hoeferlin_Trail_in_Ramapo_Mountain_State_Forest_in_New_Jersey.jpg" class="ppt" alt="two gnarly pitch pines">
         <img src="http://www.treetopics.com/pinus_rigida/pitch_pine_3259.png") class="ppl" alt="pitch pine, looks exactly like a regular pine">
         <img src="http://www.pvpark.org/images/species/pitchpine-bark-temporary.jpg" class="ppb" alt="pitch pine bark, looks rectangular">
+      </div>
+      <div class="ppDrop">
+          drop answer here
       </div>
     </div>
   </body>
