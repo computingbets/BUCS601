@@ -52,11 +52,14 @@ body {
 
 h3 {
   color: darkgreen;
+  //color: #DE11E1;
 }
 
 .com1 {
   //border-top: 1px solid darkgreen;
   border-bottom: 1px solid darkgreen;
+  background-color: rgba(27,137,66, .75);
+
   //border-style: solid;
 
 }
@@ -64,6 +67,7 @@ h3 {
 .com2 {
   border-top: 1px solid darkgreen;
   border-bottom: 1px solid darkgreen;
+  background-color: rgba(19,90,44, .75);
   //border-style: solid;
 
 }
@@ -71,13 +75,20 @@ h3 {
 .com3 {
   border-top: 1px solid darkgreen;
   border-bottom: 1px solid darkgreen;
+  background-color: rgba(27,137,66, .75);
   //border-style: solid;
 
 }
 
 .com4 {
   border-top: 1px solid darkgreen;
+  background-color: rgba(19,90,44, .75);
 //  border-bottom: 1px solid darkgreen;
   //border-style: solid;
 
+}
+
+.header {
+  background-color: rgba(245, 147, 233,.7);
+  padding: 1px;
 }
