@@ -23,12 +23,13 @@
       });
 
       $(function drop() {
+        event.preventDefault();
       $('.gbDrop').droppable( {
          drop: function(event, ui) {
            //var slotNumber = $(this).data( 'number' );
            //var cardNumber = ui.draggable.data( 'number' );
            console.log(ui);
-           if ($(ui.draggable.text() === '1432523')) {
+           if ($(ui.draggable.text() === 'Grey Birch')) {
              alert("This tree is Grey Birch, native to Massachusetts");
            } else {
              alert("Incorrect! This is a different tree native to Massachusetts");
