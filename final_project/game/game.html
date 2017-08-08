@@ -4,22 +4,85 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="game.scss">
     <title>Landscape Game</title>
-    <link rel="icon"
-      type="image/png"
-      href="http://www.hgsitebuilder.com/files/writeable/uploads/hostgator631553/image/tree_favicon.gif">
+    <link rel="icon" type="image/png" href="http://www.hgsitebuilder.com/files/writeable/uploads/hostgator631553/image/tree_favicon.gif">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+      <script src="game.js"></script>
+      <script src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+      <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+      <script type="text/javascript">
+      $(function init() {
+        $('.gbdrag').draggable();
+        $('.bcdrag').draggable();
+        $('.sdrag').draggable();
+        $('.ercdrag').draggable();
+        $('.ppdrag').draggable();
+        $('.gadrag').draggable();
+        $('.wodrag').draggable();
+        $('.ahdrag').draggable();
+      });
+
+      $(function drop() {
+      $('.gbDrop').droppable( {
+         drop: function(event, ui) {
+          console.log(event);
+         }
+       });
+       $('.bcDrop').droppable( {
+          drop: function(event, ui) {
+
+          }
+        });
+        $('.sDrop').droppable( {
+           drop: function(event, ui) {
+
+           }
+         });
+         $('.ercDrop').droppable( {
+            drop: function(event, ui) {
+
+            }
+          });
+          $('.gaDrop').droppable( {
+             drop: function(event, ui) {
+
+             }
+           });
+           $('.woDrop').droppable( {
+              drop: function(event, ui) {
+
+              }
+            });
+            $('.ahDrop').droppable( {
+               drop: function(event, ui) {
+
+               }
+             });
+             $('.gbDrop').droppable( {
+                drop: function(event, ui) {
+
+                }
+              });
+       });
+
+      //  let birchDrop = function() {
+      //    if ($(.gbdrag))
+      //  }
+
+      </script>
   </head>
   <body>
     <div class="console">
       Pick a tree and guess its name!
       <ul>
-        <li style="display: inline; border-style: solid; border-color: darkgreen;" draggable="true" class="gbdrag">Grey Birch</li>
-        <li style="display: inline; border-style: solid; border-color: darkgreen;" draggable="true" class="bcdrag">Black Cherry</li>
-        <li style="display: inline; border-style: solid; border-color: darkgreen;" draggable="true" class="sdrag">Sassafras</li>
-        <li style="display: inline; border-style: solid; border-color: darkgreen;" draggable="true" class="ercdrag">Eastern Red Cedar</li>
-        <li style="display: inline; border-style: solid; border-color: darkgreen;" draggable="true" class="ppdrag">Pitch Pine</li>
-        <li style="display: inline; border-style: solid; border-color: darkgreen;" draggable="true" class="gadrag">Green Ash</li>
-        <li style="display: inline; border-style: solid; border-color: darkgreen;" draggable="true" class="wodrag">White Oak</li>
-        <li style="display: inline; border-style: solid; border-color: darkgreen;" draggable="true" class="ahdrag">American Holly</li>
+        <li style="display: inline; border-style: solid; border-color: darkgreen;"  class="gbdrag" id="gbdrag">Grey Birch</li>
+        <li style="display: inline; border-style: solid; border-color: darkgreen;"  class="bcdrag">Black Cherry</li>
+        <li style="display: inline; border-style: solid; border-color: darkgreen;"  class="sdrag">Sassafras</li>
+        <li style="display: inline; border-style: solid; border-color: darkgreen;"  class="ercdrag">Eastern Red Cedar</li>
+        <li style="display: inline; border-style: solid; border-color: darkgreen;"  class="ppdrag">Pitch Pine</li>
+        <li style="display: inline; border-style: solid; border-color: darkgreen;"  class="gadrag">Green Ash</li>
+        <li style="display: inline; border-style: solid; border-color: darkgreen;"  class="wodrag">White Oak</li>
+        <li style="display: inline; border-style: solid; border-color: darkgreen;"  class="ahdrag">American Holly</li>
       </ul>
     </div>
     <div class="game_flex">
