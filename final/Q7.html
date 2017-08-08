@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>?7</title>
+    <script type="text/javascript">
+      let push = $('.arrayData').val();
+      let push2 = $('.arrayData').text();
+
+      function pushArr(push1, push2) => {
+        let arrayQ = [];
+        arrayQ.push(push1);
+        arrayQ.push(push2);
+      }
+      $('.arrayData').on('submit', pushArr);
+    </script>
+  </head>
+  <body>
+    <fieldset>
+      Array Push<input type="text" name="s" value="s" class="arrayData">
+    </fieldset>
+  </body>
+</html>
