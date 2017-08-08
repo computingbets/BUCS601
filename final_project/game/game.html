@@ -12,62 +12,87 @@
       <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
       <script type="text/javascript">
       $(function init() {
-        $('.gbdrag').draggable();
-        $('.bcdrag').draggable();
-        $('.sdrag').draggable();
-        $('.ercdrag').draggable();
-        $('.ppdrag').draggable();
-        $('.gadrag').draggable();
-        $('.wodrag').draggable();
-        $('.ahdrag').draggable();
+        $('.gbdrag').draggable().data('number', 1);
+        $('.bcdrag').draggable().data('number', 2);
+        $('.sdrag').draggable().data('number', 3);
+        $('.ercdrag').draggable().data('number', 4);
+        $('.ppdrag').draggable().data('number', 5);
+        $('.gadrag').draggable().data('number', 6);
+        $('.wodrag').draggable().data('number', 7);
+        $('.ahdrag').draggable().data('number', 8);
       });
 
       $(function drop() {
       $('.gbDrop').droppable( {
          drop: function(event, ui) {
-          console.log(event);
+           //var slotNumber = $(this).data( 'number' );
+           //var cardNumber = ui.draggable.data( 'number' );
+           console.log(ui);
+           if ($(ui.draggable.text() === '1432523')) {
+             alert("This tree is Grey Birch, native to Massachusetts");
+           } else {
+             alert("Incorrect! This is a different tree native to Massachusetts");
+           }
          }
        });
        $('.bcDrop').droppable( {
           drop: function(event, ui) {
-
-          }
+            if ($(ui.draggable.hasClass('bcdrag'))) {
+              alert("This tree is the Black Cherry, native to Massachusetts");
+            } else {
+              alert("Incorrect! This is a different tree native to Massachusetts");
+            }          }
         });
         $('.sDrop').droppable( {
            drop: function(event, ui) {
-
-           }
+             console.log(ui.draggable.data('number'))
+             if ($(ui.draggable.hasClass('sdrag'))) {
+               alert("This is Sassafras! Native to Massachusetts.");
+             } else {
+               alert("Incorrect! This is a different tree native to Massachusetts");
+             }           }
          });
          $('.ercDrop').droppable( {
             drop: function(event, ui) {
-
-            }
+              if ($(ui.draggable.hasClass('ercdrag'))) {
+                alert("This tree is Eastern Red Cedar, native to Massachusetts");
+              } else {
+                alert("Incorrect! This is a different tree native to Massachusetts");
+              }            }
           });
           $('.gaDrop').droppable( {
              drop: function(event, ui) {
-
-             }
+               if ($(ui.draggable.hasClass('gadrag'))) {
+                 alert("This tree is the Green Ash, native to Massachusetts");
+               } else {
+                 alert("Incorrect! This is a different tree native to Massachusetts");
+               }             }
            });
            $('.woDrop').droppable( {
               drop: function(event, ui) {
-
-              }
+                if ($(ui.draggable.hasClass('wodrag'))) {
+                  alert("This tree is White Oak, native to Massachusetts");
+                } else {
+                  alert("Incorrect! This is a different tree native to Massachusetts");
+                }              }
             });
             $('.ahDrop').droppable( {
                drop: function(event, ui) {
-
-               }
+                 if ($(ui.draggable.hasClass('ahdrag'))) {
+                   alert("This tree is the American Holly, native to Massachusetts");
+                 } else {
+                   alert("Incorrect! This is a different tree native to Massachusetts");
+                 }               }
              });
-             $('.gbDrop').droppable( {
+             $('.ppDrop').droppable( {
                 drop: function(event, ui) {
-
-                }
+                  if ($(ui.draggable.hasClass('ahdrag'))) {
+                    alert("This tree is the Perch Pine, native to Massachusetts");
+                  } else {
+                    alert("Incorrect! This is a different tree native to Massachusetts");
+                  }               }
               });
        });
-
-      //  let birchDrop = function() {
-      //    if ($(.gbdrag))
-      //  }
 
       </script>
   </head>
@@ -144,7 +169,7 @@
       </div>
       <div class="pitch_pine">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/2013-05-12_11_23_41_Pitch_Pine_trees_and_view_west_from_the_Hoeferlin_Trail_in_Ramapo_Mountain_State_Forest_in_New_Jersey.jpg/1920px-2013-05-12_11_23_41_Pitch_Pine_trees_and_view_west_from_the_Hoeferlin_Trail_in_Ramapo_Mountain_State_Forest_in_New_Jersey.jpg" class="ppt" alt="two gnarly pitch pines">
-        <img src="http://www.treetopics.com/pinus_rigida/pitch_pine_3259.png") class="ppl" alt="pitch pine, looks exactly like a regular pine">
+        <img src="http://www.treetopics.com/pinus_rigida/pitch_pine_3259.png" class="ppl" alt="pitch pine, looks exactly like a regular pine">
         <img src="http://www.pvpark.org/images/species/pitchpine-bark-temporary.jpg" class="ppb" alt="pitch pine bark, looks rectangular">
       </div>
       <div class="ppDrop">
