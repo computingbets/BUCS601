@@ -10,7 +10,7 @@ let add20 = function (whatever) {
   };
 };
 
-function add20FatArrow (whatever) => {
+const add20FatArrow = () (whatever) => {
   if (typeof whatever = 'string') {
     return whatever.append('20');
   } else if (typeof whatever = 'number') {

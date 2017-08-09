@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Q1</title>
+    <script src="jquery-3.2.1.min.js"></script>
     <script type="text/javascript">
-    const onNavSignIn = () => {
+    const executePromise = () => {
       $('#execute').on('click', executePromise);
 };
 
@@ -23,10 +24,14 @@
     });
   });
 };
+
+    const rejectPromise = function() {
+      $('#rejection').on('click', executePromise.abort());
+    };
     </script>
   </head>
   <body onload="script();">
     <button type="button" name="button" id="execute">execute</button>
-    <button type="button" name="button">reject</button>
+    <button type="button" name="button" id="rejection">reject</button>
   </body>
 </html>
